@@ -31,6 +31,14 @@ Python has support for all of the basic [[https://notes.ethancpost.com/data_type
   "This is a string"
   'This is also a string'
 
+  # Multi line Strings are also possible with triple quotes
+  """This is a
+     string.
+  """
+  '''So is
+     this!
+  '''
+
   # Floats
   0.3
   3.14
@@ -47,7 +55,7 @@ Python has support for all of the basic [[https://notes.ethancpost.com/data_type
 
 You can also check the type of any value or variable with ~type()~:
 #+name: type
-#+begin_src python
+#+begin_src python :exports both
   a = 248.1231238
 
   # You can escape characters with \ so they get printed
@@ -60,7 +68,7 @@ This would print:
 
 Python also has a complex type:
 #+name: complex
-#+begin_src python
+#+begin_src python :exports both
   x = 1+2j
 
   print("variable \"x\" has a type of:", type(x))
@@ -69,3 +77,31 @@ Python also has a complex type:
 This would print:
 #+RESULTS: complex
 : variable "x" has a type of: <class 'complex'>
+
+Python has support for all of the basic arithmetic operators:
+#+name: arithemtic
+#+begin_src python :exports both
+  print("addition:", 10+25)
+  print("subtraction:", 2-9)
+  print("multiplication:", 4*24)
+  print("division:", 72/6)
+  print("exponents:", 2**8)
+#+end_src
+
+With the above we would get this:
+#+RESULTS: arithemtic
+: addition: 35
+: subtraction: -7
+: multiplication: 96
+: division: 12.0
+: exponents: 256
+
+Python also has support for [[notes.ethancpost.com/modulo.html][Modulo]]:
+#+name: modulo
+#+begin_src python
+  print("The remainder (mod) of 19 and 5 is:", 19%5)
+#+end_src
+
+In this case:
+#+RESULTS: modulo
+: The remainder (mod) of 19/5 is: 4
