@@ -1,0 +1,17 @@
+#+TITLE: Python Notes
+
+This repository is going to be less put together than some of my other notes
+repositories, but that is simply because I learned python about a decade ago and
+I didn't take proper notes back then. The main idea of this repo is just to have
+a place for me to dump some notes and jot some ideas around python as I
+encounter things. I will however leave some notes on generic python concepts as
+I feel like it to help anyone that happens to stumble upon this repo.
+
+For the record I despise ~pip~ so much that I tend to avoid python so I am by no
+means good at python. I personally think ~pip~ is such an awful package manager
+that it ruins python as a programming language. I also think if you defend ~pip~
+you are either just coping or you are delusional. I'll also add that in ~pip~'s
+defense it is improvement over older package management attempts python had,
+which is just sad.
+
+- [[./coreConcepts/README.org][Core Concepts]] :: Notes on generic python concepts

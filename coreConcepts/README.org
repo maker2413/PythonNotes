@@ -1,0 +1,71 @@
+#+TITLE: Core Concepts
+#+PROPERTY: header-args:python :session concepts
+#+PROPERTY: header-args:python+ :tangle core-concepts.py
+#+PROPERTY: header-args:python+ :results output
+#+PROPERTY: header-args:python+ :shebang "#!/usr/bin/env python"
+
+Most of these will be taken from [[https://learnxinyminutes.com/docs/python/][Learn X in Y minutes]].
+
+Comments:
+#+begin_src python :results none :tangle no
+  # Single line comments are like this
+
+  """ Multiline comments can be written
+      using three "s, and are often used
+      as documentation
+  """
+#+end_src
+
+Python has support for all of the basic [[https://notes.ethancpost.com/data_types.html][Primitives]]:
+#+begin_src python :results none :tangle no
+  # Integers
+  3
+  2413
+  72
+
+  # Booleans
+  True
+  False
+
+  # Strings (Can be created with ' or ")
+  "This is a string"
+  'This is also a string'
+
+  # Floats
+  0.3
+  3.14
+  2.5
+#+end_src
+
+[[https://notes.ethancpost.com/variables.html][Variable]] declaration in python is done without specifying type:
+#+begin_src python :results none :tangle no
+  a = 3
+  b = "hello"
+  c = 2.134872
+  d = True
+#+end_src
+
+You can also check the type of any value or variable with ~type()~:
+#+name: type
+#+begin_src python
+  a = 248.1231238
+
+  # You can escape characters with \ so they get printed
+  print("variable \"a\" has a type of:", type(a))
+#+end_src
+
+This would print:
+#+RESULTS: type
+: <class 'float'>
+
+Python also has a complex type:
+#+name: complex
+#+begin_src python
+  x = 1+2j
+
+  print("variable \"x\" has a type of:", type(x))
+#+end_src
+
+This would print:
+#+RESULTS: complex
+: variable "x" has a type of: <class 'complex'>
