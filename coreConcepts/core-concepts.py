@@ -79,3 +79,17 @@ print(c.upper())
 
 # Remove spaces at the beginning and at the end of the string
 print(d.strip())
+
+x = [20, 30, "hello", "world", 12.25]
+
+print("x type:", type(x), "x contains:", x)
+
+x = [10, 20]
+y = ['hello', 'world']
+
+print("Concate:", x + y)
+print("Repetition:", x * 3)
+print("10 in x:", 10 in x)
+print(len(x))
+print("First index in x:", x[0])
+print("Slice of x and y:", (x+y)[0:3])

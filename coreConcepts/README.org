@@ -4,6 +4,11 @@
 #+PROPERTY: header-args:python+ :results output
 #+PROPERTY: header-args:python+ :shebang "#!/usr/bin/env python"
 
+This guide is just going to rapid fire some of the basics of Python. These notes
+aren't going to be entirely great especially if you have never tried to learn a
+programming language. This is because I learned Python about a decade ago and I
+didn't take notes back then.
+
 Most of these will be taken from [[https://learnxinyminutes.com/docs/python/][Learn X in Y minutes]].
 
 Comments:
@@ -229,6 +234,40 @@ That would give us:
 : hello
 : HELLO
 : hello
+
+Lists in Python are mutable [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] designed for storing a group of items:
+#+name: lists
+#+begin_src python :exports both
+  x = [20, 30, "hello", "world", 12.25]
+
+  print("x type:", type(x), "x contains:", x)
+#+end_src
+
+#+RESULTS: lists
+: x type: <class 'list'> x contains: [20, 30, 'hello', 'world', 12.25]
+
+We can also perform operations on lists:
+#+name: listoperations
+#+begin_src python :exports both
+  x = [10, 20]
+  y = ['hello', 'world']
+
+  print("Concate:", x + y)
+  print("Repetition:", x * 3)
+  print("10 in x:", 10 in x)
+  print(len(x))
+  print("First index in x:", x[0])
+  print("Slice of x and y:", (x+y)[0:3])
+#+end_src
+
+This gives us:
+#+RESULTS: listoperations
+: Concate: [10, 20, 'hello', 'world']
+: Repetition: [10, 20, 10, 20, 10, 20]
+: 10 in x: True
+: 2
+: First index in x: 10
+: Slice of x and y: [10, 20, 'hello']
 
 At this point I am sick of covering basic concepts for python. I may add more to
 this later, but honestly python is quite easy to understand if you know any
