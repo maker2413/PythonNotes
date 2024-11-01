@@ -235,7 +235,7 @@ That would give us:
 : HELLO
 : hello
 
-Lists in Python are mutable [[id:8d91fa56-6375-4b57-98af-56d57aa7a1d2][data types]] designed for storing a group of items:
+Lists in Python are mutable [[https://notes.ethancpost.com/data_types.html][data types]] designed for storing a group of items:
 #+name: lists
 #+begin_src python :exports both
   x = [20, 30, "hello", "world", 12.25]
@@ -278,6 +278,100 @@ This gives us:
 : Slice of x and y: [10, 20, 'hello']
 : append 42 to x: [10, 20, 42]
 : remove 20 from x: [10, 42]
+
+Tuples in Python are like lists, but are immutable:
+#+name: tuples
+#+begin_src python :exports both
+  tup = (10, 20, 'welcome', 'mlops', 12.567)
+
+  print(type(tup))
+  print(tup)
+#+end_src
+
+Tada:
+#+RESULTS: tuples
+: <class 'tuple'>
+: (10, 20, 'welcome', 'mlops', 12.567)
+
+Tuples can also have operations done on them, although limited due to tuples
+being immutable:
+#+name: tupleoperations
+#+begin_src python :exports both
+  print("Concate:", tup + tup)
+  print("Repetition:", tup * 2)
+
+  print("Index 2:", tup[2])
+  print("Slice:", tup[0:3])
+#+end_src
+
+#+RESULTS: tupleoperations
+: Concate: (10, 20, 'welcome', 'mlops', 12.567, 10, 20, 'welcome', 'mlops', 12.567)
+: Repetition: (10, 20, 'welcome', 'mlops', 12.567, 10, 20, 'welcome', 'mlops', 12.567)
+: Index 2: welcome
+: Slice: (10, 20, 'welcome')
+
+In Python, a dictionary is a versatile and mutable data type that is used to
+store key-value pairs. Dictionaries are also indexed by the keys rather than by
+an index number:
+#+name: dictionary
+#+begin_src python :exports both
+  x = {'number': 9000, "name": "john", 'age': 25, 'city': 'New York'}
+
+  print(x)
+  print("Name:", x['name'])
+
+  x['age'] = 55
+  print("New Age:", x['age'])
+#+end_src
+
+This gives us:
+#+RESULTS: dictionary
+: {'number': 9000, 'name': 'john', 'age': 25, 'city': 'New York'}
+: Name: john
+: New Age: 55
+
+Dictionaries can also have operations done on them:
+#+name: dictionaryoperations
+#+begin_src python :exports both
+  print(len(x))
+  print(x.keys())
+  print(x.values())
+  print(x.items())
+#+end_src
+
+This gives us:
+#+RESULTS: dictionaryoperations
+: 4
+: dict_keys(['number', 'name', 'age', 'city'])
+: dict_values([9000, 'john', 55, 'New York'])
+: dict_items([('number', 9000), ('name', 'john'), ('age', 55), ('city', 'New York')])
+
+Python also has sets, which an unordered mutable collection of *unique*
+elements:
+#+name: sets
+#+begin_src python :exports both
+  m = {10, 20, 30, "hello", "welcome", 100, 100, "hi"}
+
+  print("Notice how the order changes:", m)
+  print("Also notice how there was only one instance of 100")
+#+end_src
+
+This gives us:
+#+RESULTS: sets
+: Notice how the order changes: {'hello', 100, 20, 'welcome', 'hi', 10, 30}
+: Also notice how there was only one instance of 100
+
+Of course we can also run operations on sets:
+#+name: setoperations
+#+begin_src python :exports both
+  print(len(m))
+  print("hi" in m)
+#+end_src
+
+Boom:
+#+RESULTS: setoperations
+: 7
+: True
 
 At this point I am sick of covering basic concepts for python. I may add more to
 this later, but honestly python is quite easy to understand if you know any

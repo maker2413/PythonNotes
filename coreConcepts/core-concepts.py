@@ -101,3 +101,35 @@ print("append 42 to x:", x)
 # Remove
 x.remove(20)
 print("remove 20 from x:", x)
+
+tup = (10, 20, 'welcome', 'mlops', 12.567)
+
+print(type(tup))
+print(tup)
+
+print("Concate:", tup + tup)
+print("Repetition:", tup * 2)
+
+print("Index 2:", tup[2])
+print("Slice:", tup[0:3])
+
+x = {'number': 9000, "name": "john", 'age': 25, 'city': 'New York'}
+
+print(x)
+print("Name:", x['name'])
+
+x['age'] = 55
+print("New Age:", x['age'])
+
+print(len(x))
+print(x.keys())
+print(x.values())
+print(x.items())
+
+m = {10, 20, 30, "hello", "welcome", 100, 100, "hi"}
+
+print("Notice how the order changes:", m)
+print("Also notice how there was only one instance of 100")
+
+print(len(m))
+print("hi" in m)
