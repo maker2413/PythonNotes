@@ -14,4 +14,5 @@ you are either just coping or you are delusional. I'll also add that in ~pip~'s
 defense it is improvement over older package management attempts python had,
 which is just sad.
 
-- [[./coreConcepts/README.org][Core Concepts]] :: Notes on generic python concepts
+- [[./coreConcepts/README.org][Core Concepts]] :: Notes on generic python concepts.
+- [[./io/README.org][IO]] :: Notes on input output.

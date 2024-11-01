@@ -133,3 +133,75 @@ print("Also notice how there was only one instance of 100")
 
 print(len(m))
 print("hi" in m)
+
+x = 3.14
+
+x = int(x)
+print("Cast x to int:", x, "type:", type(x))
+x = float(x)
+print("Recast x to float", x, "type:", type(x))
+x = str(x)
+print("Cast x to string", x, "type:", type(x))
+
+x = 10
+
+if x > 0:
+    print("x is greater than 0")
+
+x = -10
+if x > 0:
+    print("x is greater than 0")
+elif x == 0:
+    print("x is equal to 0")
+else:
+    print("x is less than 0")
+
+fruits = ["apple", 'banana', 'cherry']
+
+print("For Loop:")
+for i in fruits:
+    print("Fruit:", i)
+
+count = 0
+
+print("\nWhile Loop:")
+while count < 3:
+    print(count)
+    count += 1
+
+for i in fruits:
+    print("Fruit:", i)
+    if i == "banana":
+        break
+
+for i in fruits:
+    if i == 'apple':
+        continue
+    print("Fruit:", i)
+
+x = [1, 2, 3, 4, 5, 6, 7, 8]
+
+results = [i**2 for i in x]
+
+print(results)
+
+def greet(name):
+    print(f"Hello {name}!")
+
+greet("Maker")
+
+def add_numbers(a, b):
+    result = a + b
+    return result
+
+x = add_numbers(5, 12)
+
+print(x)
+
+def sub_numbers(a, b=1):
+    result = a - b
+    return result
+
+x = sub_numbers(10)
+
+print(x)

@@ -373,6 +373,165 @@ Boom:
 : 7
 : True
 
+Casting in Python refers to the process of converting one data type to another:
+#+name: casting
+#+begin_src python :exports both
+  x = 3.14
+
+  x = int(x)
+  print("Cast x to int:", x, "type:", type(x))
+  x = float(x)
+  print("Recast x to float", x, "type:", type(x))
+  x = str(x)
+  print("Cast x to string", x, "type:", type(x))
+#+end_src
+
+Output:
+#+RESULTS: casting
+: Cast x to int: 3 type: <class 'int'>
+: Recast x to float 3.0 type: <class 'float'>
+: Cast x to string 3.0 type: <class 'str'>
+
+Python also has the standard [[https://notes.ethancpost.com/conditionals.html][conditionals]] that most programming languages have:
+#+name: conditionals
+#+begin_src python :exports both
+  x = 10
+
+  if x > 0:
+      print("x is greater than 0")
+
+  x = -10
+  if x > 0:
+      print("x is greater than 0")
+  elif x == 0:
+      print("x is equal to 0")
+  else:
+      print("x is less than 0")
+#+end_src
+
+This is what our two if/else blocks would output:
+#+RESULTS: conditionals
+: x is greater than 0
+: x is less than 0
+
+Python also has a ~for~ loop and ~while~ loop like most programming languages:
+#+name: loops
+#+begin_src python :exports both
+  fruits = ["apple", 'banana', 'cherry']
+
+  print("For Loop:")
+  for i in fruits:
+      print("Fruit:", i)
+
+  count = 0
+
+  print("\nWhile Loop:")
+  while count < 3:
+      print(count)
+      count += 1
+#+end_src
+
+We can see how our loops work when we run them:
+#+RESULTS: loops
+: For Loop:
+: Fruit: apple
+: Fruit: banana
+: Fruit: cherry
+: 
+: While Loop:
+: 0
+: 1
+: 2
+
+If we ever need to exit a loop prematurely we can use ~break~:
+#+name: break
+#+begin_src python :exports both
+  for i in fruits:
+      print("Fruit:", i)
+      if i == "banana":
+          break
+#+end_src
+
+We can see that when we hit =banana= we break out of the loop:
+#+RESULTS: break
+: Fruit: apple
+: Fruit: banana
+
+There is also a ~continue~ statement, which can be used to skip the rest of the
+code in a loop for the current iteration:
+#+name: continue
+#+begin_src python :exports both
+  for i in fruits:
+      if i == 'apple':
+          continue
+      print("Fruit:", i)
+#+end_src
+
+We can see that we didn't print when we were on the =apple= iteration:
+#+RESULTS: continue
+: Fruit: banana
+: Fruit: cherry
+
+We can also use for loops in a variable declaration in Python:
+#+name: listcomprehention
+#+begin_src python :exports both
+  x = [1, 2, 3, 4, 5, 6, 7, 8]
+
+  results = [i**2 for i in x]
+
+  print(results)
+#+end_src
+
+We used a for loop to square each value in our list:
+#+RESULTS: listcomprehention
+: [1, 4, 9, 16, 25, 36, 49, 64]
+
+[[https://notes.ethancpost.com/functions.html][Functions]] are declared in Python like the following:
+#+name: functions
+#+begin_src python :exports both
+  def greet(name):
+      print(f"Hello {name}!")
+
+  greet("Maker")
+#+end_src
+
+We were able to call our greet function with an input string:
+#+RESULTS: functions
+: Hello Maker!
+
+Functions in Python can also return values:
+#+name: return
+#+begin_src python :exports both
+  def add_numbers(a, b):
+      result = a + b
+      return result
+
+  x = add_numbers(5, 12)
+
+  print(x)
+#+end_src
+
+We can see that our function returned the result and we were able to set it to
+variable. When we print that variable we get:
+#+RESULTS: return
+: 17
+
+We can also default input values so they can be optionally provided:
+#+name: defaultinput
+#+begin_src python :exports both
+  def sub_numbers(a, b=1):
+      result = a - b
+      return result
+
+  x = sub_numbers(10)
+
+  print(x)
+#+end_src
+
+We can see that even though we only provided one input ~b~ was default to 1:
+#+RESULTS: defaultinput
+: 9
+
 At this point I am sick of covering basic concepts for python. I may add more to
 this later, but honestly python is quite easy to understand if you know any
 other programming language.

@@ -1,0 +1,25 @@
+#+TITLE: Input Output
+#+PROPERTY: header-args:python :session concepts
+#+PROPERTY: header-args:python+ :tangle input-output.py
+#+PROPERTY: header-args:python+ :results output
+#+PROPERTY: header-args:python+ :shebang "#!/usr/bin/env python"
+
+The most basic forms of input and output in Python are the ~print~ function that
+we have already used in the core concepts section and the ~input~ function.
+#+name: input
+#+begin_src python :exports both
+  u = input("Enter the value to store: ")
+
+  print("output is:", u)
+#+end_src
+
+An example of what this would look like:
+#+RESULTS: input
+: Enter the value to store: 123
+: output is: 123
+
+The type of our input variable will be a ~str~ even if the user types a
+number. We could cast input if we wanted like this:
+#+begin_src python
+  u = int(input("Enter a number: "))
+#+end_src
