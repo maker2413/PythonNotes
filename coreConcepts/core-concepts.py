@@ -93,3 +93,11 @@ print("10 in x:", 10 in x)
 print(len(x))
 print("First index in x:", x[0])
 print("Slice of x and y:", (x+y)[0:3])
+
+# Append
+x.append(42)
+print("append 42 to x:", x)
+
+# Remove
+x.remove(20)
+print("remove 20 from x:", x)

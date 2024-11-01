@@ -258,6 +258,14 @@ We can also perform operations on lists:
   print(len(x))
   print("First index in x:", x[0])
   print("Slice of x and y:", (x+y)[0:3])
+
+  # Append
+  x.append(42)
+  print("append 42 to x:", x)
+
+  # Remove
+  x.remove(20)
+  print("remove 20 from x:", x)
 #+end_src
 
 This gives us:
@@ -268,6 +276,8 @@ This gives us:
 : 2
 : First index in x: 10
 : Slice of x and y: [10, 20, 'hello']
+: append 42 to x: [10, 20, 42]
+: remove 20 from x: [10, 42]
 
 At this point I am sick of covering basic concepts for python. I may add more to
 this later, but honestly python is quite easy to understand if you know any
