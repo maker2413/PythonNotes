@@ -98,10 +98,138 @@ With the above we would get this:
 
 Python also has support for [[notes.ethancpost.com/modulo.html][Modulo]]:
 #+name: modulo
-#+begin_src python
+#+begin_src python :exports both
   print("The remainder (mod) of 19 and 5 is:", 19%5)
 #+end_src
 
 In this case:
 #+RESULTS: modulo
 : The remainder (mod) of 19/5 is: 4
+
+Python also has all of the basic [[https://notes.ethancpost.com/operators.html][comparison operators]]:
+#+name: comparison
+#+begin_src python :exports both
+  x = 10
+  y = 25
+
+  print("x =", x, "and y =", y)
+  print("x is greater than y:", x > y)
+  print("x is less than y:", x < y)
+  print("x is greater than or equal to y:", x >= y)
+  print("x is less than or equal to 10:", x <= 10)
+  print("y is equal to 27:", y == 27)
+  print("x is not equal to 11:", x != 11)
+#+end_src
+
+With the above we would get:
+#+RESULTS: comparison
+: x = 10 and y = 25
+: x is greater than y: False
+: x is less than y: True
+: x is greater than or equal to y: False
+: x is less than or equal to 10: True
+: y is equal to 27: False
+: x is not equal to 11: True
+
+Python also has the standard [[https://notes.ethancpost.com/operators.html][assignment operators]]:
+#+name: assignment
+#+begin_src python :exports both
+  x = 5
+
+  print("x =", x)
+  x += 1
+  print("x += 1:", x)
+  x -= 2
+  print("x -= 2:", x)
+  x *= 4
+  print("x *= 4:", x)
+  x /= 2
+  print("x /= 2:", x)
+  x %= 3
+  print("x %= 3:", x)
+#+end_src
+
+These would give us:
+#+RESULTS: assignment
+: x = 5
+: x += 1: 6
+: x -= 2: 4
+: x *= 4: 16
+: x /= 2: 8.0
+: x %= 3: 2.0
+
+Python also offers different forms of string manipulation:
+#+name: manipulation
+#+begin_src python :exports both
+  a = "python"
+  b = "project"
+
+  print("Concatenation:", a + b)
+  print("Repetition:", a*2)
+
+  # Membership operator
+  print('project' in  a)
+
+  print("length of a:", len(a))
+#+end_src
+
+We can see those prints give us:
+#+RESULTS: manipulation
+: Concatenation: pythonproject
+: Repetition: pythonpython
+: False
+: length of a: 6
+
+Python also allows us to index or slice a string:
+#+name: indexslice
+#+begin_src python :exports both
+  a = "hello, thank you for reading through my notes!"
+
+  # index starts from zero like most languages
+  print(a[9])
+
+  # Slicing is done like: string[start:stop]
+  print(a[7:16])
+#+end_src
+
+Our index and slice will be:
+#+RESULTS: indexslice
+: a
+: thank you
+
+There are also many builtin functions to manipulate strings in Python. Let's
+look at a few examples:
+#+name: stringfunctions
+#+begin_src python :exports both
+  a = "hello, thank you for reading through my notes!"
+  b = "HELLO"
+  c = "hello"
+  d = "   hello   "
+
+  # Capitalize first letter
+  print(a.capitalize())
+
+  # Checks if string is alpha numeric or not
+  print(a.isalnum())
+
+  # Makes whole string lower case
+  print(b.lower())
+
+  # Makes whole string upper case
+  print(c.upper())
+
+  # Remove spaces at the beginning and at the end of the string
+  print(d.strip())
+#+end_src
+
+That would give us:
+#+RESULTS: stringfunctions
+: Hello, thank you for reading through my notes!
+: False
+: hello
+: HELLO
+: hello
+
+At this point I am sick of covering basic concepts for python. I may add more to
+this later, but honestly python is quite easy to understand if you know any
+other programming language.
