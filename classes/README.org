@@ -1,0 +1,53 @@
+#+TITLE: Classes
+#+PROPERTY: header-args:python :session classes
+#+PROPERTY: header-args:python+ :tangle classes.py
+#+PROPERTY: header-args:python+ :results output
+#+PROPERTY: header-args:python+ :shebang "#!/usr/bin/env python"
+
+In Python, a class is a blueprint for creating objects, providing a way to model
+and structure code in an object-oriented programming paradigm.
+
+We can create a class like this:
+#+name: classes
+#+begin_src python :results none
+  class MyClass:
+      # Class variable
+      class_variable = "I am a class variable"
+
+      # Constructor (initializer) method
+      def __init__(self, attribute1, attribute2):
+          # Instance variables
+          self.attribute1 = attribute1
+          self.attribute2 = attribute2
+
+      def display_attributes(self):
+          print(f"Attribute 1: {self.attribute1}")
+          print(f"Attribute 2: {self.attribute2}")
+
+      def modify_attributes(self, new_value1, new_value2):
+          self.attribute1 = new_value1
+          self.attribute2 = new_value2
+#+end_src
+
+We can then use our class to create objects:
+#+name: objects
+#+begin_src python
+  # Creating objects
+  obj1 = MyClass("Value1", "Value2")
+  obj2 = MyClass("AnotherValue1", "AnotherValue2")
+
+  # Accessing attributes and methods
+  print(obj1.attribute1)
+  obj2.display_attributes()
+
+  # Modifying attributes
+  obj1.modify_attributes("NewValue1", "NewValue2")
+  obj1.display_attributes()
+#+end_src
+
+#+RESULTS: objects
+: Value1
+: Attribute 1: AnotherValue1
+: Attribute 2: AnotherValue2
+: Attribute 1: NewValue1
+: Attribute 2: NewValue2

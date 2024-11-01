@@ -16,3 +16,4 @@ which is just sad.
 
 - [[./coreConcepts/README.org][Core Concepts]] :: Notes on generic python concepts.
 - [[./io/README.org][IO]] :: Notes on input output.
+- [[./classes/README.org][Classes]] :: Notes on Class.
