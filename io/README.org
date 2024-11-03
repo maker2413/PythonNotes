@@ -4,8 +4,42 @@
 #+PROPERTY: header-args:python+ :results output
 #+PROPERTY: header-args:python+ :shebang "#!/usr/bin/env python"
 
-The most basic forms of input and output in Python are the ~print~ function that
-we have already used in the core concepts section and the ~input~ function.
+The most basic forms of input and output in Python are the ~print~ function and
+the ~input~ function.
+
+Let's begin by looking at the print function:
+#+name: print
+#+begin_src python :exports both
+  print("hello")
+#+end_src
+
+That gives us:
+#+RESULTS: print
+: hello
+
+Pretty simple right? I'm not actually going to get into details on print because
+it seems too simple right now to be worth typing and you can look it up
+yourself. I am going to go over some the escape characters that Python supports:
+#+name: escape
+#+begin_src python :exports both
+  # \n is for newlines
+  print("hello \nworld!")
+
+  # \t is for tabs
+  print("hello \tworld!")
+
+  # \\ will escape the backslash character
+  print("hello \\world!")
+#+end_src
+
+We can see what each of those prints give us:
+#+RESULTS: escape
+: hello 
+: world!
+: hello 	world!
+: hello \world!
+
+Now let's look at the input function
 #+name: input
 #+begin_src python :exports both
   u = input("Enter the value to store: ")
@@ -23,3 +57,44 @@ number. We could cast input if we wanted like this:
 #+begin_src python
   u = int(input("Enter a number: "))
 #+end_src
+
+Python also has support for reading and manipulating data in files. When opening
+a file in Python you can open a file with the following modes:
+- r :: means read.
+- w :: means write. If the file doesn't exist it will be created. If it already
+  exists it will be over-written.
+- x :: means write, but only if the file doesn't exist.
+- a :: means append (write after the end) if the file exists.
+
+You can also define the following secondary letters:
+- t (or nothing) :: means text.
+- b :: means binary.
+
+Now let's open a file, *don't forget to close your files when you are done*:
+#+name: fileopen
+#+begin_src python :results none
+  example_text = """This file was created with python.
+  all of the contents of this file are defined in
+  the same Python program.
+  """
+
+  fileobj = open("example.txt", "wt")
+  fileobj.write(example_text)
+  fileobj.close()
+#+end_src
+
+Now that we have written our data to the file let's try and read the contents of
+the file:
+#+name: fileread
+#+begin_src python :exports both
+  fileobj = open("example.txt", "rt")
+  data = fileobj.read()
+  fileobj.close()
+
+  print(data)
+#+end_src
+
+#+RESULTS: fileread
+: This file was created with python.
+: all of the contents of this file are defined in
+: the same Python program.
