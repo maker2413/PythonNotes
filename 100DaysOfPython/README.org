@@ -1,0 +1,7 @@
+#+TITLE: 100 Days of Code: The Complete Python Pro Bootcamp
+
+For the fun of it I have been going through this course that I bought on Udemy
+year ago: https://www.udemy.com/course/100-days-of-code/
+
+I just wanted a place to through the code from this course so that is the point
+of this directory. Someday I might put this somewhere more proper.

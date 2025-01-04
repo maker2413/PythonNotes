@@ -17,3 +17,7 @@ which is just sad.
 - [[./coreConcepts/README.org][Core Concepts]] :: Notes on generic python concepts.
 - [[./io/README.org][IO]] :: Notes on input output.
 - [[./classes/README.org][Classes]] :: Notes on Class.
+
+This repository for now also includes some code snippets that I don't know what
+to so with right now. Sorry, but eventually I will organize my things:
+- [[./100DaysOfPython/README.org][Udemy Code Snippets]]
